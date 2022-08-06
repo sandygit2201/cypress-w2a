@@ -65,14 +65,15 @@ describe('cypress tests on sample banking application on w2a website',()=>{
 
          //Get customer Account Numbers
          cy.xpath('//table[@class="table table-bordered table-striped"]/tbody/tr[1]/td[4]').then($el=>{
-            cy.wrap($el.text()).as('accountsDisplayed')
+            cy.wrap($el.text()).as('accountsDisplayed');
+            cy.log("dfadsf");
         })
 
         cy.get('@accountsDisplayed').then($accounts=>{
             let accountsList = $accounts.toString().split(' ')
-            cy.log("First Account Number::"+accountsList[0])
-            cy.log("second Account Number::"+accountsList[1])
-            cy.log("Third Account Number::"+accountsList[2])
+            cy.log("First Account Number::"+accountsList[0]);
+            cy.log("second Account Number::"+accountsList[1]);
+            cy.log("Third Account Number::"+accountsList[2]);
         })
 
     })

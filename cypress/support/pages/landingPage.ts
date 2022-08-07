@@ -7,12 +7,10 @@ class LandingPage{
     verifyBankName():void{
         cy.contains('XYZ Bank').should('be.visible');
     }
-    verifyButtonsOnLandingPage(){
-       BasePage.verifyElementWithText('Home')
-       BasePage.verifyElementWithText('Customer Login')
-       BasePage.verifyElementWithText('Bank Manager Login')
-        
+    loginAsManager():void{
+        cy.contains('Bank Manager Login').click();
     }
+    
 }
 
 export default new LandingPage()

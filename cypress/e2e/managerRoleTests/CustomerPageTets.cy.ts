@@ -23,6 +23,7 @@ describe('Tests for the customers page',()=>{
         cy.contains('Delete').click();
     })
 
+
     //test 1
     // write a single test to verify customer details
     //search for a customer with name Ron

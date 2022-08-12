@@ -1,8 +1,13 @@
-class BasePage{
+export class BasePage{
 
-    verifyElementWithText(btnText:string):void{
-        cy.contains(btnText).should('be.visible')
+
+    verifyElementWithText(text:string):void{
+        cy.contains(text).should('be.visible')
+    }
+
+    navigateToHomePage(){
+
+        cy.contains('Home').click()
+
     }
 }
-
-export default new BasePage();

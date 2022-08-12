@@ -1,5 +1,7 @@
-import BasePage from "./basePage";
-class LandingPage{
+import { BasePage } from "./basePage";
+
+
+class LandingPage extends BasePage{
 
     invokeApp():void{
         cy.visit('/');
@@ -9,6 +11,10 @@ class LandingPage{
     }
     loginAsManager():void{
         cy.contains('Bank Manager Login').click();
+    }
+
+    navigateToCustomerLoginPage(){
+        cy.contains('Customer Login').click();
     }
     
 }

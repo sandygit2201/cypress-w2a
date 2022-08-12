@@ -1,5 +1,4 @@
 import LandingPage from '../support/pages/landingPage'
-import BasePage from '../support/pages/basePage'
 
 describe('Landing page tets',()=>{
 
@@ -15,19 +14,19 @@ describe('Landing page tets',()=>{
 
     it('Verify Home button on Landing Page',()=>{
 
-        BasePage.verifyElementWithText('Home');
+        LandingPage.verifyElementWithText('Home');
 
     })
 
     it('Verify Customer Login button on Landing Page',()=>{
 
-        BasePage.verifyElementWithText('Customer Login');
+        LandingPage.verifyElementWithText('Customer Login');
 
     })
 
     it('Verify Bank manager Login button on Landing Page',()=>{
 
-        BasePage.verifyElementWithText('Bank Manager Login');
+        LandingPage.verifyElementWithText('Bank Manager Login');
 
     })
 

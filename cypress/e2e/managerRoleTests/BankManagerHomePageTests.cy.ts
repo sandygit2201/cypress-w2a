@@ -1,4 +1,3 @@
-import basePage from "../../support/pages/basePage"
 import landingPage from "../../support/pages/landingPage"
 
 describe('Bank manager Homepage Tests',()=>{

@@ -1,5 +1,6 @@
 import 'cypress-xpath'
-class CustomersPage{
+import { BasePage } from '../basePage';
+class CustomersPage extends BasePage{
 
     deleteAllCustomers():void{
         cy.xpath('//button[.="Delete"]').each(($el)=>{
@@ -9,7 +10,7 @@ class CustomersPage{
     }
 
     searchCustomer(customerName:string):void{
-        let txtSearchCustomerXpath = '//input[@type="text" and @placeholder="Search Customer"]
+        let txtSearchCustomerXpath = '//input[@type="text" and @placeholder="Search Customer"]';
         cy.xpath(txtSearchCustomerXpath).type(customerName);
     }
 

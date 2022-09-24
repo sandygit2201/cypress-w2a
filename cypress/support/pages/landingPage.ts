@@ -5,6 +5,7 @@ class LandingPage extends BasePage{
 
     invokeApp():void{
         cy.visit('/');
+        cy.log('Navigated to Bank Login page')
     }
     verifyBankName():void{
         cy.contains('XYZ Bank').should('be.visible');

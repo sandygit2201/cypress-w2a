@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run e2e/bankingAppTests.cy.ts"
+    "test": "npx cypress run --spec cypress/e2e/customerRoleTests/TransactionsTests.cy.ts --record --key f41c6874-f8af-4f3c-9766-d00037bd73c0",
+    "smoke":"npx cypress run --spec cypress/e2e/smokeTests",
+    "regression":"npx cypress run --spec cypress/e2e/regression",
+    "managerRoleTests":"npx cypress run --spec cypress/e2e/managerRoleTests",
+    "customerRoleTests":"npx cypress run --spec cypress/e2e/customerRoleTests"
   },
   "keywords": [],
   "author": "",

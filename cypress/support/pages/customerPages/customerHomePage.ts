@@ -19,6 +19,13 @@ class CustomerHomePage extends BasePage{
         cy.contains('Balance : '+amount).should('be.visible');
 
     }
+
+    withdrawAmount(amount:string){
+        cy.contains('Withdrawl').click();
+        cy.xpath('//input[@ng-model="amount"]').type(amount);
+        cy.xpath('//button[@type="submit" and text()=\'Withdraw\']').click();
+        cy.contains('Transaction successful').should('be.visible')
+    }
     
 
 }

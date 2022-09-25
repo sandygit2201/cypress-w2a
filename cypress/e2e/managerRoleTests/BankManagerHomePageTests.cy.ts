@@ -1,4 +1,5 @@
 import landingPage from "../../support/pages/landingPage"
+import LandingPage from "../../support/pages/landingPage";
 
 describe('Bank manager Homepage Tests',()=>{
 
@@ -7,12 +8,12 @@ describe('Bank manager Homepage Tests',()=>{
         landingPage.loginAsManager();
     })
 
-    // Add a test to verify Customer button 
-
-    //Add a tests to verify Open account Button
-
-    // Add a test to verify Add Customer button
-    
-
+    // Add a test to verify Customer button
+    it('Verify elements on manager home page',()=>{
+        LandingPage.verifyElementWithText('Home');
+        LandingPage.verifyElementWithText('Add Customer');
+        LandingPage.verifyElementWithText('Open Account');
+        LandingPage.verifyElementWithText('Customers');
+    })
 
 })

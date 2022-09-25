@@ -1,7 +1,7 @@
 import { BasePage } from "../basePage";
 
-class WithdrawlPage extends BasePage{
+class WithdrawPage extends BasePage{
 
 }
 
-export default new WithdrawlPage();
+export default new WithdrawPage();

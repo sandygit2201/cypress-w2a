@@ -19,13 +19,21 @@ describe('tests related to transactions',()=>{
         customerHomePage.depositAmount('1000');
         
     })
+
+    it.only('Login as customer, Deposit, withdraw and  verify balance',()=>{
+
+        customerLoginPage.loginAsUser('Neville Longbottom')
+        customerHomePage.depositAmount('1000');
+        customerHomePage.withdrawAmount('500');
+
+    })
+
     it('Customer deposit using fixture files',()=>{
 
         cy.fixture('deposit').then(jsonData=>{
             customerLoginPage.loginAsUser(jsonData.userName)
             customerHomePage.depositAmount(jsonData.depositAmount);
         })
-        
     })
 
 })
